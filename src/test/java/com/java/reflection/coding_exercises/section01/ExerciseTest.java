@@ -2,7 +2,6 @@ package com.java.reflection.coding_exercises.section01;
 
 import java.io.Serializable;
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.Collection;
 import java.util.List;
 import java.util.RandomAccess;
@@ -12,13 +11,13 @@ import org.junit.jupiter.api.Test;
 class ExerciseTest {
 
     @Test
-    void findAllImplementedInterfaces() {
+    void testFindAllImplementedInterfaces() {
         Set<Class<?>> interfaces = Exercise.findAllImplementedInterfaces(A.class);
         assert interfaces.size() == 3;
     }
 
     @Test
-    void verifyArrayListImplementsInterfaces() {
+    void testFindAllImplementedInterfacesWithArrayList() {
         List<Class<?>> expected = new ArrayList<>();
         expected.add(Serializable.class);
         expected.add(List.class);
