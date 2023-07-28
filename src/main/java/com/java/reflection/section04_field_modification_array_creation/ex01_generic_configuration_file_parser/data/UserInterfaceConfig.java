@@ -1,4 +1,4 @@
-package com.java.reflection.section04_field_modification_array_creation.generic_configuration_file_parser.data;
+package com.java.reflection.section04_field_modification_array_creation.ex01_generic_configuration_file_parser.data;
 
 public class UserInterfaceConfig {
     private String titleColor;

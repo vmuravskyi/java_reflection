@@ -1,6 +1,7 @@
-package com.java.reflection.section04_field_modification_array_creation.generic_configuration_file_parser.configloader;
+package com.java.reflection.section04_field_modification_array_creation.ex01_generic_configuration_file_parser.configloader;
 
-import com.java.reflection.section04_field_modification_array_creation.generic_configuration_file_parser.data.GameConfig;
+import com.java.reflection.section04_field_modification_array_creation.ex01_generic_configuration_file_parser.data.GameConfig;
+import com.java.reflection.section04_field_modification_array_creation.ex01_generic_configuration_file_parser.data.UserInterfaceConfig;
 import java.io.IOException;
 import java.lang.reflect.Constructor;
 import java.lang.reflect.Field;
@@ -10,11 +11,15 @@ import java.util.Scanner;
 
 public class Main {
 
-    private static final Path GAME_CONFIG_PATH = Path.of("generic_configuration_file_parser/game-properties.cfg");
+    private static final Path GAME_CONFIG_PATH = Path.of("src/main/resources/ex01_generic_configuration_file_parser/game-properties.cfg");
+    private static final Path UI_CONFIG_PATH = Path.of("src/main/resources/ex01_generic_configuration_file_parser/user-interface.cfg");
 
     public static void main(String[] args) throws IOException, InvocationTargetException, NoSuchMethodException, InstantiationException, IllegalAccessException {
-        GameConfig configObject = createConfigObject(GameConfig.class, GAME_CONFIG_PATH);
-        System.out.println(configObject);
+        GameConfig configObGameConfig = createConfigObject(GameConfig.class, GAME_CONFIG_PATH);
+        UserInterfaceConfig userInterfaceConfig = createConfigObject(UserInterfaceConfig.class, UI_CONFIG_PATH);
+
+        System.out.println(configObGameConfig);
+        System.out.println(userInterfaceConfig);
     }
 
     public static <T> T createConfigObject(Class<?> clazz, Path filePath)

@@ -1,6 +1,7 @@
-package com.java.reflection.section04_field_modification_array_creation.generic_configuration_file_parser.data;
+package com.java.reflection.section04_field_modification_array_creation.ex02_array_creation_and_initialization.data;
 
 public class GameConfig {
+
     private int releaseYear;
     private String getName;
     private double price;
@@ -25,4 +26,5 @@ public class GameConfig {
             ", price=" + price +
             '}';
     }
+
 }
