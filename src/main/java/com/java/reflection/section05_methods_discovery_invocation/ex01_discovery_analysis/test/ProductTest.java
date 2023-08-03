@@ -19,7 +19,6 @@ public class ProductTest {
         for (Method method : methods) {
             nameToMethod.put(method.getName(), method);
         }
-
         return nameToMethod;
     }
 
@@ -31,7 +30,6 @@ public class ProductTest {
             if (!stringMethodMap.containsKey(getterName)) {
                 throw new IllegalStateException(
                     String.format("Field %s doesn't have a getter method", field.getName()));
-
             }
 
             Method getter = stringMethodMap.get(getterName);
